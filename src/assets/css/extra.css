@@ -1,0 +1,76 @@
+* {
+  user-select: none;
+}
+:root {
+  --font-base: 5vw;
+}
+#container2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+}
+.back_btn {
+  height: 32px;
+  opacity: .7;
+  transition: opacity .15s;
+}
+.back_btn:active {
+  opacity: .25 !important;
+}
+.back_btn svg {
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+@keyframes zoomin {
+  from {
+      opacity: 0;
+      scale: .4;
+  }
+  to {
+      opacity: 1;
+      scale: 1;
+  }
+}
+@keyframes zoomin2 {
+  from {
+      opacity: 0;
+      scale: .8;
+  }
+  to {
+      opacity: 1;
+      scale: 1;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body { 
+      background: #111; 
+  }
+}
+
+.app_trans-enter-active,
+.app_trans-leave-active {
+  transition: all 0.25s cubic-bezier(0.3, 0, 0, 1);
+}
+.app_trans-enter-active {
+  transition-delay: 0.05s;
+}
+.app_trans-enter-from {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.app_trans-leave-to {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.25s cubic-bezier(0.3, 0, 0, 1);
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0 !important;
+}
